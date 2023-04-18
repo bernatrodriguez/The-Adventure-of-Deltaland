@@ -10,7 +10,7 @@ public class VidaBase : MonoBehaviour
     public float Salud { get; protected set; } // Propiedad de tipo float que puede ser tanto regresada (get) como modificada (set protected -> solo en la clase vidabase), almacena los datos de la salud
 
     // Start is called before the first frame update
-    void Start()
+    protected virtual void Start()
     {
         Salud = saludInicial;
     }

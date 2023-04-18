@@ -6,6 +6,12 @@ public class PersonajeVida : VidaBase // Hereda de VidaBase, por lo que tiene ac
     public static Action EventoPersonajeDerrotado;
     public bool PuedeSerCurado => Salud < saludMax; // Un bool que nos indica que si la salud es menor a la máxima (si nos falta vida), podemos ser curados
 
+    protected override void Start()
+    {
+        base.Start(); // Llamamos al start de la clase base, es decir, de VidaBase
+        ActualizarBarraVida(Salud, saludMax);
+    }
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.T)) // Si apretamos la tecla T
@@ -40,6 +46,6 @@ public class PersonajeVida : VidaBase // Hereda de VidaBase, por lo que tiene ac
 
     protected override void ActualizarBarraVida(float vidaActual, float vidaMax)
     {
-        
+        UIManager.Instance.ActualizarVidaPersonaje(vidaActual, vidaMax);
     }
 }
