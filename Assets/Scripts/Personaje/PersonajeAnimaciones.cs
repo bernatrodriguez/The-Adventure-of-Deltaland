@@ -54,6 +54,12 @@ public class PersonajeAnimaciones : MonoBehaviour
         }
     }
 
+    public void RevivirPersonaje()
+    {
+        ActivarLayer(layerIdle); // Activamos la animación idle
+        _animator.SetBool(derrotado, false); // El personaje ya no está derrotado
+    }
+
     private void PersonajeDerrotadoRespuesta()
     {
         if (_animator.GetLayerWeight(_animator.GetLayerIndex(layerIdle)) == 1) // Si estamos en el layer idle
