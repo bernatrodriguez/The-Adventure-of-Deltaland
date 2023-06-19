@@ -69,4 +69,20 @@ public class InventarioSlot : MonoBehaviour
             EventoSlotInteraccion?.Invoke(TipoDeInteraccion.Usar, Index); // Si el evento no es nulo, lo invocamos con la interacción de usar
         }
     }
+
+    public void SlotEquiparItem() // Cuando seleccionemos un item en nuestro inventario y le demos a equipar, llamaremos a este método
+    {
+        if (Inventario.Instance.ItemsInventario[Index] != null) // Si tenemos un item en el slot
+        {
+            EventoSlotInteraccion?.Invoke(TipoDeInteraccion.Equipar, Index); // Si no es nulo, lo invocamos con el tipo de interacción equipar
+        }
+    }
+
+    public void SlotEliminarItem() // Cuando seleccionemos un item en nuestro inventario y le demos a eliminar, llamaremos a este método
+    {
+        if (Inventario.Instance.ItemsInventario[Index] != null) // Si tenemos un item en el slot
+        {
+            EventoSlotInteraccion?.Invoke(TipoDeInteraccion.Eliminar, Index); // Si no es nulo, lo invocamos con el tipo de interacción eliminar
+        }
+    }
 }

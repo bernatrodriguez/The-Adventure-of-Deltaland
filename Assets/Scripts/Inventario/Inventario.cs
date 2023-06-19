@@ -101,7 +101,7 @@ public class Inventario : Singleton<Inventario>
         }
     }
 
-    private void EliminarItem(int index) // Método para eliminar items, por ejemplo, al usar una poción de vida
+    private void EliminarUnItem(int index) // Método para eliminar items, por ejemplo, al usar una poción de vida
     {
         itemsInventario[index].Cantidad--; // Reducimos la cantidad del item en 1
         if (itemsInventario[index].Cantidad <= 0) // Si la cantidad resultante del item es igual o menor que 0
@@ -140,10 +140,42 @@ public class Inventario : Singleton<Inventario>
 
         if (itemsInventario[index].UsarItem()) // Si el item en el slot se ha podido usar, es decir, si el método UsarItem nos ha regresado true
         {
-            EliminarItem(index); // Eliminamos una unidad del item
+            EliminarUnItem(index); // Eliminamos una unidad del item
         }
     }
+
+    private void EquiparItem(int index)
+    {
+        if (itemsInventario[index] == null) // Si este item no existe en el slot
+        {
+            return; // Detenemos la ejecución
+        }
+
+        if (itemsInventario[index].Tipo != TiposDeItem.Armas) // Si su tipo de diferente de armas
+        {
+            return; // Detenemos la ejecución
+        }
+
+        // Si cumple con todo
+        itemsInventario[index].EquiparItem(); // Equipamos el item
+    }
     
+    private void EliminarItem(int index)
+    {
+        if (itemsInventario[index] == null) // Si este item no existe en el slot
+        {
+            return; // Detenemos la ejecución
+        }
+
+        if (itemsInventario[index].Tipo != TiposDeItem.Armas) // Si su tipo de diferente de armas
+        {
+            return; // Detenemos la ejecución
+        }
+
+        // Si cumple con todo
+        itemsInventario[index].EliminarItem(); // Eliminamos el item
+    }
+
     #region Eventos
 
     private void SlotInteraccionRespuesta(TipoDeInteraccion tipo, int index)
@@ -154,8 +186,10 @@ public class Inventario : Singleton<Inventario>
                 UsarItem(index);
                 break;
             case TipoDeInteraccion.Equipar: // Equipar
+                EquiparItem(index);
                 break;
             case TipoDeInteraccion.Eliminar: // Eliminar
+                EliminarItem(index);
                 break;
         }
     }

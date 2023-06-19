@@ -103,6 +103,24 @@ public class InventarioUI : Singleton<InventarioUI>
         }
     }
 
+    public void EquiparItem()
+    {
+        if (SlotSeleccionado != null) // Si tenemos un slot seleccionado
+        {
+            SlotSeleccionado.SlotEquiparItem(); // Llamamos al método de equipar el item
+            SlotSeleccionado.SeleccionarSlot(); // Volvemos a seleccionar el slot anterior
+        }
+    }
+
+    public void EliminarItem()
+    {
+        if (SlotSeleccionado != null) // Si tenemos un slot seleccionado
+        {
+            SlotSeleccionado.SlotEliminarItem(); // Llamamos al método de eliminar el item
+            SlotSeleccionado.SeleccionarSlot(); // Volvemos a seleccionar el slot anterior
+        }
+    }
+
     #region Evento
     private void SlotInteraccionRespuesta(TipoDeInteraccion tipo, int index) // Cuando hacemos click en un item, mostramos su descipcion correspondiente
     {
