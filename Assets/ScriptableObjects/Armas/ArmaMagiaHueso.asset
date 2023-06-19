@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ba30cd9c1f950c45810ea8d0a3b2184, type: 3}
+  m_Name: ArmaMagiaHueso
+  m_EditorClassIdentifier: 
+  ArmaIcono: {fileID: 21300000, guid: 3cc6fafa2e78dee46ae14fdd251ddb90, type: 3}
+  IconoSkill: {fileID: 322570123, guid: 5ffbb361373276d4a9b7bff22d7f1c58, type: 3}
+  Tipo: 0
+  "Da\xF1o": 8
+  ManaRequerida: 15
+  ChanceCritico: 5
+  ChanceBloqueo: 2

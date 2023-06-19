@@ -11,6 +11,9 @@ public class UIManager : Singleton<UIManager>
 
     [Header("Paneles")]
     [SerializeField] private GameObject panelStats;
+    [SerializeField] private GameObject panelInventario;
+    [SerializeField] private GameObject panelInspectorQuests;
+    [SerializeField] private GameObject panelPersonajeQuests;
 
     [Header("Barra")]
     [SerializeField] private Image vidaPlayer;
@@ -22,6 +25,7 @@ public class UIManager : Singleton<UIManager>
     [SerializeField] private TextMeshProUGUI manaTMP;
     [SerializeField] private TextMeshProUGUI expTMP;
     [SerializeField] private TextMeshProUGUI nivelTMP;
+    [SerializeField] private TextMeshProUGUI monedasTMP;
 
     [Header("Stats")]
     [SerializeField] private TextMeshProUGUI statDañoTMP;
@@ -68,6 +72,7 @@ public class UIManager : Singleton<UIManager>
         // expTMP.text = $"{((expActual/expRequeridaNuevoNivel) * 100):F2}%"; // Actualizamos el texto de experiencia (porcentaje)
 
         nivelTMP.text = stats.Nivel.ToString(); // Actualizamos el nivel del personaje mostrado convirtiendo el stat en texto
+        monedasTMP.text = MonedasManager.Instance.MonedasTotales.ToString(); // Actualizamos las monedas del personaje
     }
 
     private void ActualizarPanelStats()
@@ -110,4 +115,42 @@ public class UIManager : Singleton<UIManager>
         expActual = pExpActual;
         expRequeridaNuevoNivel = pExpRequerida;
     }
+
+    #region Paneles
+
+    public void AbrirCerrarPanelStats()
+    {
+        panelStats.SetActive(!panelStats.activeSelf); // Activamos o desactivamos el panel, cada vez que llamemos al método
+    }
+
+    public void AbrirCerrarPanelInventario()
+    {
+        panelInventario.SetActive(!panelInventario.activeSelf); // Activamos o desactivamos el panel, cada vez que llamemos al método
+    }
+
+    public void AbrirCerrarPanelPersonajeQuests()
+    {
+        panelPersonajeQuests.SetActive(!panelPersonajeQuests.activeSelf); // Activamos o desactivamos el panel, cada vez que llamemos al método
+    }
+
+    public void AbrirCerrarPanelInspectorQuests()
+    {
+        panelInspectorQuests.SetActive(!panelInspectorQuests.activeSelf); // Activamos o desactivamos el panel, cada vez que llamemos al método
+    }
+
+    public void AbrirPanelInteraccion(InteraccionExtraNPC tipoInteraccion) // Llamamos al método correspondidente al panel que queremos abrir, según la interacción extra del NPC
+    {
+        switch (tipoInteraccion)
+        {
+            case InteraccionExtraNPC.Quests:
+                AbrirCerrarPanelInspectorQuests();
+                break;
+            case InteraccionExtraNPC.Tienda:
+                break;
+            case InteraccionExtraNPC.Crafting:
+                break;
+        }
+    }
+
+    #endregion
 }

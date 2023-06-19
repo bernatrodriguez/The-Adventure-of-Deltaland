@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ba30cd9c1f950c45810ea8d0a3b2184, type: 3}
+  m_Name: ArmaMagiaTridente
+  m_EditorClassIdentifier: 
+  ArmaIcono: {fileID: 21300000, guid: c70a37f40e377c947a0165665fe5db14, type: 3}
+  IconoSkill: {fileID: -691216605, guid: e2a6463e585555948a47a6a5046a3cd4, type: 3}
+  Tipo: 0
+  "Da\xF1o": 10
+  ManaRequerida: 10
+  ChanceCritico: 10
+  ChanceBloqueo: 25

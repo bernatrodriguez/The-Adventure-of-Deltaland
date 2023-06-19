@@ -6,6 +6,7 @@ public class Personaje : MonoBehaviour
 {
     [SerializeField] private PersonajeStats stats; // Referenciamos los stats
 
+    public PersonajeExperiencia PersonajeExperiencia { get; private set; }
     public PersonajeVida PersonajeVida { get; private set; }
     public PersonajeAnimaciones PersonajeAnimaciones { get; private set; }
     public PersonajeMana PersonajeMana { get; private set; }
@@ -15,6 +16,7 @@ public class Personaje : MonoBehaviour
         PersonajeVida = GetComponent<PersonajeVida>(); // Referenciamos la clase PersonajeVida
         PersonajeAnimaciones = GetComponent<PersonajeAnimaciones>(); // Referenciamos la clase PersonajeAnimaciones
         PersonajeMana = GetComponent<PersonajeMana>(); // Referenciamos la clase PersonajeMana
+        PersonajeExperiencia = GetComponent<PersonajeExperiencia>(); // Referenciamos la clase PersonajeExperiencia
     }
 
     public void RestaurarPersonaje()

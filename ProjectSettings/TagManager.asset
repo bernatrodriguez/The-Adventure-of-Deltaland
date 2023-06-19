@@ -11,7 +11,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Player
   - 
   - 
   - 
@@ -56,6 +56,12 @@ TagManager:
   - name: Tilemap_Props
     uniqueID: 3437004479
     locked: 0
+  - name: Items
+    uniqueID: 815237175
+    locked: 0
   - name: Personaje
     uniqueID: 2647748217
+    locked: 0
+  - name: UI
+    uniqueID: 1119833007
     locked: 0

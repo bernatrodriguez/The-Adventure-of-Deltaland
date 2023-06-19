@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c28068df300227a4d89a2c15fbce7ba2, type: 3}
+  m_Name: QuestMata50Enemigos
+  m_EditorClassIdentifier: 
+  Nombre: Escuela de supervivencia 3
+  ID: Mata50
+  CantidadObjetivo: 50
+  Descripcion: "Ya has demostrado de lo que eres capaz, acaba con la vida de 50 enemigos
+    y domina Deltaland. Te dar\xE9 una gran recompensa."
+  RecompensaOro: 100
+  RecompensaExp: 50
+  RecompensaItem:
+    Item: {fileID: 11400000, guid: 29395663b15ca2f4dab0bc84e7194fb0, type: 2}
+    Cantidad: 50
+  CantidadActual: 0
+  QuestCompletado: 0

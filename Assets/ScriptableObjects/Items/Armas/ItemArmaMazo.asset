@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb0a77c71108e8d42a27bb164f5af468, type: 3}
+  m_Name: ItemArmaMazo
+  m_EditorClassIdentifier: 
+  ID: ArmaMazo
+  Nombre: Mazo del herrero
+  Icono: {fileID: 21300000, guid: 37a8a817dedc0e2498d48a80b911298b, type: 3}
+  Descripcion: "El viejo mazo del herrero de Deltaland, con \xE9l se han forjado
+    las mejores armas de la isla y por ello otorga un gran poder a quien lo sostenga."
+  Tipo: 0
+  EsConsumible: 0
+  EsAcumulable: 0
+  AcumulacionMax: 1
+  Cantidad: 0
+  Arma: {fileID: 11400000, guid: 84b88e829ed1f164b951e4d38a5b94de, type: 2}

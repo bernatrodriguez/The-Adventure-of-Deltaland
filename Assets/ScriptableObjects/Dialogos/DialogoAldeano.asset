@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e6ad2df4efc42744aaba5aeaa1464af, type: 3}
+  m_Name: DialogoAldeano
+  m_EditorClassIdentifier: 
+  Nombre: Alcalde Frank
+  Icono: {fileID: 21300000, guid: 558416145d483444f9aed1f740c403db, type: 3}
+  ContieneInteraccionExtra: 0
+  InteraccionExtra: 0
+  Saludo: "Hola Ansel, estaba esper\xE1ndote. Te doy la bienvenida a la capital de
+    Deltaland."
+  Conversacion:
+  - Oracion: Bla bla bla 1
+  - Oracion: Bla bla bla 2
+  - Oracion: Bla bla bla 3
+  Despedida: Bueno, eso es todo. Espero que disfrutes de tu experiencia en la isla.
+    Un saludo.

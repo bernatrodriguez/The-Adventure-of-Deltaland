@@ -10,6 +10,7 @@ public class PersonajeMana : MonoBehaviour
     [SerializeField] private float regeneracionPorSegundo;
 
     public float ManaActual { get; private set; }
+    public bool SePuedeRestaurar => ManaActual < manaMax; // Si el maná no está lleno, nos regresa true
 
     private PersonajeVida _personajeVida;
 
@@ -41,6 +42,23 @@ public class PersonajeMana : MonoBehaviour
             ManaActual -= cantidad; // Restamos el requerido al actual
             ActualizarBarraMana(); // Llamamos al método para actualizar la barra de maná
         }
+    }
+
+    public void RestaurarMana(float cantidad)
+    {
+        if (ManaActual >= manaMax) // Si el maná está lleno
+        {
+            return; // Paramos la ejecución
+        }
+
+        // Si el maná no está lleno
+        ManaActual += cantidad; // Sumamos la cantidad de maná deseada
+        if (ManaActual > manaMax) // Si el maná actual sobrepasa el maná máximo
+        {
+            ManaActual = manaMax; // Establecemos el maná actual con el valor de maná máximo
+        }
+
+        UIManager.Instance.ActualizarManaPersonaje(ManaActual, manaMax); // Actualizamos la barra de maná
     }
 
     private void RegenerarMana() // Método para regenerar el maná por segundo

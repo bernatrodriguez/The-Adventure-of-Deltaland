@@ -29,6 +29,7 @@ public class VidaBase : MonoBehaviour
 
             if (Salud <= 0f) // Si la salud es 0, es decir, si es personaje ha sido derrotado
             {
+                Salud = 0f; // Establecemos la salud en 0 (para evitar mostrar vida negativa)
                 ActualizarBarraVida(Salud, saludMax); // Actualizamos de nuevo la barra
                 PersonajeDerrotado(); // Llamamos a la función de personaje derrotado
             }
