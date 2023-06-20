@@ -47,4 +47,9 @@ public class InventarioItem : ScriptableObject
     {
         return true; // Por defecto nos regresa el valor de verdadero
     }
+
+    public virtual string DescripcionItemCrafting()
+    {
+        return "";
+    }
 }

@@ -87,6 +87,30 @@ public class Inventario : Singleton<Inventario>
         return indexesDelItem; // Regresamos la lista de índices
     }
 
+    public int ObtenerCantidadDeItems(string itemID)
+    {
+        List<int> indexes = VerificarExistencias(itemID);
+        int cantidadTotal = 0;
+        foreach (int index in indexes)
+        {
+            if (itemsInventario[index].ID == itemID)
+            {
+                cantidadTotal += itemsInventario[index].Cantidad;
+            }
+        }
+
+        return cantidadTotal;
+    }
+
+    public void ConsumirItem(string itemID)
+    {
+        List<int> indexes = VerificarExistencias(itemID);
+        if (indexes.Count > 0)
+        {
+            EliminarItem(indexes[indexes.Count - 1]);
+        }
+    }
+
     private void AñadirItemEnSlotDisponible(InventarioItem item, int cantidad)
     {
         for (int i = 0; i < itemsInventario.Length; i++) // Recorremos todo el inventario

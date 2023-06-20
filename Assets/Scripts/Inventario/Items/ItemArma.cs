@@ -31,4 +31,11 @@ public class ItemArma : InventarioItem
         ContenedorArma.Instance.EliminarArma(); // Llamamos al método de eliminar arma
         return true; // Devolvemos verdadero, se ha podido eliminar
     }
+
+    public override string DescripcionItemCrafting()
+    {
+        string descripcion = $"- Probabilidad de Critico: {Arma.ChanceCritico}%\n" +
+                             $"- Probabilidad de Bloqueo: {Arma.ChanceBloqueo}%";
+        return descripcion;
+    }
 }

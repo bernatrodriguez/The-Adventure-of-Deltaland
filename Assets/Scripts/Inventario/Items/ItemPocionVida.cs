@@ -19,4 +19,10 @@ public class ItemPocionVida : InventarioItem // Hereda de la clase de Inventario
 
         return false; // Regresamos que no se ha aplicado el item
     }
+
+    public override string DescripcionItemCrafting()
+    {
+        string descripcion = $"Restaura {HPRestauracion} de Salud";
+        return descripcion;
+    }
 }
