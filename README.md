@@ -7,3 +7,5 @@ INSTRUCCIONES DE INSTALACIÓN
 3. En la carpeta Golden Master encontramos la versión final del juego, para Windows, Mac y Linux
 
 IMPORTANTE: Nunca descargar solo el ejecutable, este se debe descargar siempre junto a los demás archivos con los qe se encuentre.
+
+Enlace al proyecto en Google Drive: https://drive.google.com/drive/folders/19bBvF7oJcOnpVipwqT9b87lghZPUWmRP?usp=sharing
