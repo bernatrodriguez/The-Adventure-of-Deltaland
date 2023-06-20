@@ -18,6 +18,7 @@ public class Arma : ScriptableObject
     public float Daño; // Daño del arma
 
     [Header("Arma Magica")]
+    public Proyectil ProyectilPrefab; // Prefab del proyectil
     public float ManaRequerida; // Maná requerido para el uso del arma
 
     [Header("Stats")]

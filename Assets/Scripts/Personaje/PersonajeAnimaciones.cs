@@ -6,9 +6,11 @@ public class PersonajeAnimaciones : MonoBehaviour
 {
     [SerializeField] private string layerIdle;
     [SerializeField] private string layerCaminar;
+    [SerializeField] private string layerAtacar;
 
     private Animator _animator;
     private PersonajeMovimiento _personajeMovimiento;
+    private PersonajeAtaque _personajeAtaque;
 
     private readonly int direccionX = Animator.StringToHash("X");
     private readonly int direccionY = Animator.StringToHash("Y");
@@ -17,6 +19,7 @@ public class PersonajeAnimaciones : MonoBehaviour
     {
         _animator = GetComponent<Animator>();
         _personajeMovimiento = GetComponent<PersonajeMovimiento>(); // Acceso a la clase PersonajeMovimiento
+        _personajeAtaque = GetComponent<PersonajeAtaque>(); // Obtenemos el componente de personaje ataque
     }
 
     // Update is called once per frame
@@ -44,7 +47,11 @@ public class PersonajeAnimaciones : MonoBehaviour
 
     private void ActualizarLayers()
     {
-        if (_personajeMovimiento.EnMovimiento) // Si el personaje está en movimiento
+        if (_personajeAtaque.Atacando) // Si estamos atacando
+        {
+            ActivarLayer(layerAtacar); // Se muestra el layer de atacar
+        }
+        else if (_personajeMovimiento.EnMovimiento) // Si el personaje está en movimiento
         {
             ActivarLayer(layerCaminar); // Activamos el layer de caminar
         }

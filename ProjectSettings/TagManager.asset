@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemigo
   layers:
   - Default
   - TransparentFX
@@ -12,7 +13,7 @@ TagManager:
   - Water
   - UI
   - Player
-  - 
+  - Enemigo
   - 
   - 
   - 
@@ -61,6 +62,9 @@ TagManager:
     locked: 0
   - name: Personaje
     uniqueID: 2647748217
+    locked: 0
+  - name: Proyectil
+    uniqueID: 2113482825
     locked: 0
   - name: UI
     uniqueID: 1119833007

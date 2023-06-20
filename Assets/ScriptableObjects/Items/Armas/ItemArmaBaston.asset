@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: ArmaBaston
   Nombre: "Bast\xF3n"
-  Icono: {fileID: 21300000, guid: 48b2216cabc90de48ad10b81cabfbfa7, type: 3}
+  Icono: {fileID: 21300000, guid: ba4d992b5229b1d45a67f92ec23fc248, type: 3}
   Descripcion: "Viejo bast\xF3n capaz de asestar duros golpes y bloquear efectivamente
     a los enemigos."
   Tipo: 0

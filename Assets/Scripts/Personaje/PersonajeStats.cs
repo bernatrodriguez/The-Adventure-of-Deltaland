@@ -41,6 +41,20 @@ public class PersonajeStats : ScriptableObject // Este tipo de clase nos permite
         PorcentajeBloqueo += 0.05f;
     }
 
+    public void AñadirBonusPorArma(Arma arma) // Le pasamos el parámetro del arma
+    {
+        Daño += arma.Daño; // Sumamos el daño
+        PorcentajeCritico += arma.ChanceCritico; // Sumamos la probabilidad de crítico
+        PorcentajeBloqueo += arma.ChanceBloqueo; // Sumamos la probabilidad de bloqueo
+    }
+
+    public void EliminarBonusPorArma(Arma arma) // Le pasamos el parámetro del arma
+    {
+        Daño -= arma.Daño; // Eliminamos el daño
+        PorcentajeCritico -= arma.ChanceCritico; // Restamos la probabilidad de crítico
+        PorcentajeBloqueo -= arma.ChanceBloqueo; // Restamos la probabilidad de bloqueo
+    }
+
     public void ResetearValores()
     {
         Daño = 5f;

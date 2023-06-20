@@ -39,4 +39,10 @@ public class ObjectPooler : MonoBehaviour
 
         return null;
     }
+
+    public void DestruirPooler() // Método para destruit el pooler
+    {
+        Destroy(ListaContenedor); // Destruimos al lista
+        lista.Clear();
+    }
 }
